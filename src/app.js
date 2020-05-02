@@ -44,8 +44,11 @@ const getInfo = async(direccion) => {
     }
 }
 
-bot.command('/clima', async (ctx)=>{
-    ctx.reply(await getInfo(dir))
+bot.hears(/clima*/ , async (ctx)=>{
+    console.log(`Mensaje enviado: ${ctx.update.message.text}`);
+    ciudad = (ctx.update.message.text).split(" ")[1];
+    console.log(`Ciudad: ${ciudad}`);
+    ctx.reply(await getInfo(ciudad))
 })
 
 
