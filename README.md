@@ -15,3 +15,11 @@ Ejecutar localmente:
 ```
 npm run dev
 ```
+
+## Mensajes
+
+* ```clima <nombre-ciudad>```: Retorna la temperatura actual de la ciudad ingresada.
+
+## Comandos
+
+
