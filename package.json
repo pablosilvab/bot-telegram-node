@@ -5,7 +5,7 @@
   "main": "bot.js",
   "scripts": {
     "dev": "nodemon src/app.js",
-    "start": "node stc/app.js"
+    "start": "node src/app.js"
   },
   "repository": {
     "type": "git",
