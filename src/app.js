@@ -1,8 +1,13 @@
 const lugar = require('../utils/lugar/lugar');
 const clima = require('../utils/clima/clima');
 
+const express = require('express');
 const dotenv = require('dotenv');
 const Telegraf = require('telegraf');
+
+const PORT = process.env.PORT || 3000;
+
+app = express();
 
 if (process.env.NODE_ENV !== 'production') {
     dotenv.config();
@@ -57,3 +62,11 @@ bot.on('sticker', (ctx)=>{
 })
 
 bot.launch()
+
+app.get('/', (req, res) => {
+    res.send('Takechi Bot');
+});
+
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
