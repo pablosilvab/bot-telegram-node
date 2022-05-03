@@ -51,7 +51,7 @@ const getInfo = async(direccion) => {
 
 bot.hears(/clima*/gmi, async (ctx)=>{
     console.log(`Mensaje enviado: ${ctx.update.message.text}`);
-    ciudad = (ctx.update.message.text);
+    ciudad = (ctx.update.message.text).split(" ")[1];
     console.log(`Ciudad: ${ciudad}`);
     ctx.reply(await getInfo(ciudad))
 })
